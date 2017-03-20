@@ -6,6 +6,7 @@ import android.content.pm.Signature;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView secret = (TextView) findViewById(R.id.text_secret);
         secret.setText(Security.getSecret());
+        Toast.makeText(this, Security.getStr(), Toast.LENGTH_SHORT).show();
     }
 
     /**

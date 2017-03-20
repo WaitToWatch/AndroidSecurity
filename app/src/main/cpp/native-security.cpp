@@ -1,6 +1,7 @@
 #include <android/log.h>
 #include <string>
-#include "native-security.h"
+//#include "native-security.h"
+#include "com_chenenyu_security_Security.h"
 
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "security", __VA_ARGS__))
 #define LOGE(...) ((void)__android_log_print(ANDROID_LOG_ERROR, "security", __VA_ARGS__))
@@ -134,5 +135,9 @@ static int verifySign(JNIEnv *env) {
 
 
 jstring Java_com_chenenyu_security_Security_getSecret(JNIEnv *env, jclass type) {
+    return env->NewStringUTF("Security str from native.");
+}
+
+jstring Java_com_chenenyu_security_Security_getStr(JNIEnv *env, jclass type) {
     return env->NewStringUTF("Security str from native.");
 }

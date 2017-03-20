@@ -10,4 +10,6 @@ public class Security {
     }
 
     public static native String getSecret();
+
+    public static native String getStr();
 }
